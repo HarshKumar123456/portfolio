@@ -7,6 +7,9 @@ import forwardArrowIcon from "../src/assets/forwardArrowIcon.png";
 import backwardArrowIcon from "../src/assets/backwardArrowIcon.png";
 import placeholderImage from "../src/assets/placeholderImage.png";
 import myPhoto from "../src/assets/myPhoto.jpg";
+import gitHubIcon from "../src/assets/github-icon.png";
+import linkedinIcon from "../src/assets/linkedin-icon.png";
+import gMailIcon from "../src/assets/gmail-icon.png";
 
 function App() {
 
@@ -70,7 +73,7 @@ function App() {
     <>
       <div className="bg-[#1e1e1e] p-4 min-h-screen">
 
-        <div className="main-container py-14 ps-4 md:pe-12 grid md:grid-cols-2 md:grid-cols-1 gap-8 rounded-3xl" style={mainContainerStyle}>
+        <div className="main-container py-14 px-2 md:ps-4 md:pe-12 grid md:grid-cols-2 md:grid-cols-1 gap-8 rounded-3xl" style={mainContainerStyle}>
 
           <div className="right-container hidden md:block"></div>
           <div className="left-container">
@@ -138,16 +141,23 @@ function App() {
                         </>
                         :
                         <>
-                          Hope you liked my work. I welcome any suggestions to improve me as a developer.
-                          <br />
-                          If you want to hire me then why wait further let us connect.
+                          Hope you liked my work. I welcome any suggestions to improve me as a developer and you can connect me via some of these methods I have given below on GitHub, LinkedIn or Mail. See you there
                           <br />
                           <br />
-                          Mail me @ <a href="mailto:harshkumar92200@gmail.com" className='text-blue-400 underline'>harshkumar92200@gmail.com</a>
+                          <b>If you want to hire me then why wait further let us connect.</b>
                           <br />
-                          Visit my GitHub Profile <a href="https://github.com/harshkumar123456" className='text-blue-400 underline'>https://github.com/harshkumar123456</a>
                           <br />
-                          Connect @ Linkdin <a href="https://www.linkedin.com/in/harsh-kumar-158634233/" className='text-blue-400 underline'>https://www.linkedin.com/in/harsh-kumar-158634233/</a>
+                          Mail me @ <a href="mailto:harshkumar92200@gmail.com" className='text-blue-400 underline'>
+                            <img src={gMailIcon} alt="gmail-icon" className='object-cover w-12'/>
+                          </a>
+                          <br />
+                          Visit my GitHub Profile <a href="https://github.com/harshkumar123456" className='text-blue-400 underline'>
+                            <img src={gitHubIcon} alt="github-icon" className='object-cover w-12'/>
+                          </a>
+                          <br />
+                          Connect @ Linkdin <a href="https://www.linkedin.com/in/harsh-kumar-158634233/" className='text-blue-400 underline'>
+                            <img src={linkedinIcon} alt="linkedin-icon" className='object-cover w-12'/>
+                          </a>
                           <br />
                           <br />
                           <br />
