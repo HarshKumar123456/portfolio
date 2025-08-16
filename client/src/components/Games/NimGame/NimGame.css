@@ -1,0 +1,31 @@
+
+
+@keyframes scale2x {
+    0%{
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(0.8);
+
+        background-image: url(../../../assets/images/placeholderImage.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        background-color: transparent;
+        
+        border: none;
+    }
+}
+
+
+.nim-game-box[popped=true] {
+    transition: all 1s ease-in-out;
+    animation: scale2x 0.4s ease-in-out forwards;
+    animation-fill-mode: both;    
+} 

@@ -65,6 +65,8 @@ const AnimatedMenu = () => {
 
   return (
     <>
+    <div className="menu-box">
+
       <audio ref={audioRef} src={clickAudio} preload="auto" />
 
       <div
@@ -113,6 +115,9 @@ const AnimatedMenu = () => {
           </div>
         ))}
       </div>
+
+    </div>
+
     </>
   );
 };

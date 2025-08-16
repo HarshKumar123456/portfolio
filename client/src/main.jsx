@@ -12,6 +12,7 @@ import App from './App.jsx';
 import "../src/index.css";
 import Page404 from './pages/Page404.jsx';
 import Games from './pages/Games.jsx';
+import NimGame from './components/Games/NimGame/NimGame.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,14 +29,10 @@ const router = createBrowserRouter([
 
   {
     path: "/games/nimgame",
-    element: <>
-      <div className="text-4xl text-center text-white" >
-        Hello I am Games/Nim Game
-      </div>
-    </>,
+    element: <NimGame />,
     errorElement: <Page404 />,
   },
-
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
