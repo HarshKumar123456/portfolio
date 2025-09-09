@@ -1,0 +1,651 @@
+.move-sofa-menu-item{
+    color: rgba(200, 215, 224, 0.816);  
+    padding: 4px;
+    font-size: 32px;
+    font-weight: 400; 
+    width: 100%;
+    cursor: pointer;
+}
+
+.move-sofa-menu-item:hover{
+    color: rgba(200, 215, 224);   
+}
+
+.move-sofa-game-level-passed{
+    background-image: url("../../../assets/images/green-coin.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.move-sofa-game-level-passedBest{
+    background-image: url("../../../assets/images/gold-coin.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.move-sofa-game-level-attempting{
+    background-image: url("../../../assets/images/blue-coin.png");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.move-sofa-game-level-locked{
+    background-image: url("../../../assets/images/black-coin.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+
+.cell {
+    width: 48px;
+    height: 48px;
+}
+
+.move-sofa-game-empty-cell {
+    background-image: url("../../../assets/images/empty-place.png");
+    background-position: center;
+    background-size: cover;
+    padding: 4px;
+}
+
+.move-sofa-game-house-things-cell {
+    background-image: url("../../../assets/images/house-thing.png");
+    background-position: center;
+    background-size: cover;
+    padding: 4px;
+}
+
+.move-sofa-game-sofa-cell {
+    background: #ba9df6;
+    border: 2px;
+}
+
+.move-sofa-game-sofa-desired-place-cell {
+    background-image: url("../../../assets/images/desired-place.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.move-sofa-game-sofa-container {
+    position: relative;
+}
+
+.move-sofa-game-sofa-start-container {
+    background-image: url("../../../assets/images/SofaStart.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.move-sofa-game-sofa-end-container {
+    background-image: url("../../../assets/images/SofaEnd.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+}
+
+#move-sofa-game-controls-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+}
+
+.move-sofa-game-control-button{
+    padding: 8px;
+    background: #140b0bb4;
+    color: rgb(158, 178, 196);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(158, 178, 196);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.move-sofa-game-control-move-help{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+/* Animations - Starts Here */
+.hse {
+    transform: rotate(0deg);
+}
+
+.hes {
+    transform: rotate(180deg);
+}
+
+.vse {
+    transform: rotate(90deg);
+}
+
+.ves {
+    transform: rotate(-90deg);
+}
+
+/* For Sofa H SE - Starts Here */
+.hse-move-down {
+    transition: all ease-in-out 1s;
+    animation: hseMoveDownAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveDownAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0%, 100%);
+    }
+}
+
+.hse-move-up {
+    transition: all ease-in-out 1s;
+    animation: hseMoveUpAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveUpAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0%, -100%);
+    }
+}
+
+.hse-move-forward {
+    transition: all ease-in-out 1s;
+    animation: hseMoveForwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveForwardAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0%);
+    }
+}
+
+
+.hse-move-backward {
+    transition: all ease-in-out 1s;
+    animation: hseMoveBackwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveBackwardAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+    }
+}
+
+
+
+.hse-move-rdl {
+    transition: all ease-in-out 1s;
+    animation: hseMoveRDLAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveRDLAnimation {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0%, 0%);
+    }
+}
+
+
+.hse-move-rdr {
+    transition: all ease-in-out 1s;
+    animation: hseMoveRDRAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveRDRAnimation {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(-100%, 100%);
+    }
+}
+
+.hse-move-rul {
+    transition: all ease-in-out 1s;
+    animation: hseMoveRULAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveRULAnimation {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(0%, 0%);
+    }
+}
+
+.hse-move-rur {
+    transition: all ease-in-out 1s;
+    animation: hseMoveRURAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hseMoveRURAnimation {
+    0% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-100%, -100%);
+    }
+}
+
+/* For Sofa H SE - Ends Here */
+
+
+
+/* For Sofa H ES - Starts Here */
+.hes-move-down {
+    transition: all ease-in-out 1s;
+    animation: hesMoveDownAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveDownAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(0%, -100%);
+    }
+}
+
+.hes-move-up {
+    transition: all ease-in-out 1s;
+    animation: hesMoveUpAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveUpAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(0%, 100%);
+    }
+}
+
+.hes-move-forward {
+    transition: all ease-in-out 1s;
+    animation: hesMoveForwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveForwardAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(-100%, 0%);
+    }
+}
+
+
+.hes-move-backward {
+    transition: all ease-in-out 1s;
+    animation: hesMoveBackwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveBackwardAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(100%, 0%);
+    }
+}
+
+
+
+.hes-move-rdl {
+    transition: all ease-in-out 1s;
+    animation: hesMoveRDLAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveRDLAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(270deg) translate(-100%, -100%);
+    }
+}
+
+
+.hes-move-rdr {
+    transition: all ease-in-out 1s;
+    animation: hesMoveRDRAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveRDRAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0%, 0%);
+    }
+
+}
+
+.hes-move-rul {
+    transition: all ease-in-out 1s;
+    animation: hesMoveRULAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveRULAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-100%, 100%);
+    }
+}
+
+.hes-move-rur {
+    transition: all ease-in-out 1s;
+    animation: hesMoveRURAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes hesMoveRURAnimation {
+    0% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(270deg) translate(0%, 0%);
+    }
+}
+
+/* For Sofa H ES - Ends Here */
+
+
+/* For Sofa V ES - Starts Here */
+.ves-move-down {
+    transition: all ease-in-out 1s;
+    animation: vesMoveDownAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveDownAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(-100%, 0%);
+    }
+}
+
+.ves-move-up {
+    transition: all ease-in-out 1s;
+    animation: vesMoveUpAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveUpAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(100%, 0%);
+    }
+}
+
+.ves-move-forward {
+    transition: all ease-in-out 1s;
+    animation: vesMoveForwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveForwardAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(0%, 100%);
+    }
+}
+
+
+.ves-move-backward {
+    transition: all ease-in-out 1s;
+    animation: vesMoveBackwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveBackwardAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-90deg) translate(0%, -100%);
+    }
+}
+
+
+
+.ves-move-rdl {
+    transition: all ease-in-out 1s;
+    animation: vesMoveRDLAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveRDLAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-180deg) translate(0%, 0%);
+    }
+}
+
+
+.ves-move-rdr {
+    transition: all ease-in-out 1s;
+    animation: vesMoveRDRAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveRDRAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+}
+
+.ves-move-rul {
+    transition: all ease-in-out 1s;
+    animation: vesMoveRULAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveRULAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(-100%, -100%);
+    }
+}
+
+.ves-move-rur {
+    transition: all ease-in-out 1s;
+    animation: vesMoveRURAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vesMoveRURAnimation {
+    0% {
+        transform: rotate(-90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-180deg) translate(-100%, 100%);
+    }
+}
+
+/* For Sofa V ES - Ends Here */
+
+
+/* For Sofa V SE - Starts Here */
+.vse-move-down {
+    transition: all ease-in-out 1s;
+    animation: vseMoveDownAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveDownAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(100%, 0%);
+    }
+}
+
+.vse-move-up {
+    transition: all ease-in-out 1s;
+    animation: vseMoveUpAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveUpAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-100%, 0%);
+    }
+}
+
+.vse-move-forward {
+    transition: all ease-in-out 1s;
+    animation: vseMoveForwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveForwardAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0%, -100%);
+    }
+}
+
+
+.vse-move-backward {
+    transition: all ease-in-out 1s;
+    animation: vseMoveBackwardAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveBackwardAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0%, 100%);
+    }
+}
+
+
+
+.vse-move-rdl {
+    transition: all ease-in-out 1s;
+    animation: vseMoveRDLAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveRDLAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(-100%, 100%);
+    }
+}
+
+
+.vse-move-rdr {
+    transition: all ease-in-out 1s;
+    animation: vseMoveRDRAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveRDRAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(-100%, -100%);
+    }
+}
+
+.vse-move-rul {
+    transition: all ease-in-out 1s;
+    animation: vseMoveRULAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveRULAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(0%, 0%);
+    }
+}
+
+.vse-move-rur {
+    transition: all ease-in-out 1s;
+    animation: vseMoveRURAnimation 0.8s ease-in-out 0.2s 1 both;
+}
+
+@keyframes vseMoveRURAnimation {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0%, 0%);
+    }
+}
+
+/* For Sofa V SE - Ends Here */

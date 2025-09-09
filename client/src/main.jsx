@@ -12,6 +12,7 @@ import App from './App.jsx';
 import "../src/index.css";
 import Page404 from './pages/Page404.jsx';
 import Games from './pages/Games.jsx';
+import MoveSofaGame from './components/Games/MoveSofaGame/MoveSofaGame.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,15 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/games/nimgame",
+    path: "/games/move-sofa-game",
+    element: <>
+      <MoveSofaGame />
+    </>,
+    errorElement: <Page404 />,
+  },
+
+  {
+    path: "/games/nim-game",
     element: <>
       <div className="text-4xl text-center text-white" >
         Hello I am Games/Nim Game

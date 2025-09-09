@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 ::-webkit-scrollbar {
-    width: 0.5em;
+    width: 0.2em;
+    height: 0.2em;
 }
 
 ::-webkit-scrollbar-track {
@@ -15,7 +16,7 @@
 }
 
 ::-webkit-scrollbar-button {
-    height: 1.6em;
+    height: 0.2em;
 }
 
 

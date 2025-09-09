@@ -58,9 +58,9 @@ const AnimatedMenu = () => {
 
   const icons = [
     { src: homeIcon, text: "Home", route: "/", sound: homeAudio },
-    { src: projectsIcon, text: "Projects", route: "/projects", sound: projectsAudio },
+    // { src: projectsIcon, text: "Projects", route: "/projects", sound: projectsAudio },
     { src: gamesIcon, text: "Games", route: "/games", sound: gamesAudio },
-    { src: downloadsIcon, text: "Applications", route: "/applications", sound: applicationsAudio },
+    // { src: downloadsIcon, text: "Applications", route: "/applications", sound: applicationsAudio },
   ];
 
   return (

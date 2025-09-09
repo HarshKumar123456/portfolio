@@ -67,13 +67,13 @@ function App() {
                       playClickSound();
                       setActiveButton("experience");
                     }}>
-                      Experiences
+                      Experience
                     </button>
                     <button className='py-2 text-sm lg:text-base rounded-xl hover:bg-[#343435] hover:text-white' style={activeButton === "recommended" ? activeButtonStyle : {}} onClick={() => {
                       playClickSound();
                       setActiveButton("recommended");
                     }}>
-                      Recommended
+                      Contact
                     </button>
                   </div>
 
