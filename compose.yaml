@@ -21,21 +21,18 @@ services:
     build:
       context: ./
       target: client-dev
-    develop:
-      watch:
-        - path: ./client/src
-          action: sync
-          target: /usr/local/app/src
-        - path: ./client/public
-          action: sync
-          target: /usr/local/app/public
-        - path: ./client/index.html
-          action: sync
-          target: /usr/local/app/index.html
-        - path: ./client/.eslintrc.cjs
-          action: sync
-          target: /usr/local/app/index.html
-        - path: ./client/package.json
-          action: rebuild
+    volumes:
+      # Below line will sync changes from queue folder to container and vice versa used for hot reloading
+      - ./client:/usr/local/app
+      # Below line Prevents node_modules to sync to host machine but we can install the packages from inside the docker container and doing that will just simply update the package.json and package-lock.json files on host machine keeping things cleaner 
+      - node_modules:/usr/local/app/node_modules
     ports:
       - 5173:5173
+
+
+  
+
+
+
+volumes:
+  node_modules:

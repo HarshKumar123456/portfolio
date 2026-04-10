@@ -4,11 +4,13 @@ import clickAudio from "../AnimatedMenu/click.wav";
 import homeAudio from "../../assets/audio/woosh.mp3";
 import projectsAudio from "../../assets/audio/woosh.mp3";
 import gamesAudio from "../../assets/audio/sci-fi-click.wav";
+import coinAudio from "../../assets/audio/coinAudio.mp3";
 import applicationsAudio from "../../assets/audio/woosh.mp3";
 
 import homeIcon from "../../assets/images/icons/home-icon.png";
 import projectsIcon from "../../assets/images/icons/projects-icon.png";
 import gamesIcon from "../../assets/images/icons/games-icon.png";
+import rupeeIcon from "../../assets/images/icons/rupee-icon.png";
 import downloadsIcon from "../../assets/images/icons/downloads-icon.png";
 import { useNavigate } from "react-router-dom";
 
@@ -58,8 +60,9 @@ const AnimatedMenu = () => {
 
   const icons = [
     { src: homeIcon, text: "Home", route: "/", sound: homeAudio },
-    // { src: projectsIcon, text: "Projects", route: "/projects", sound: projectsAudio },
+    { src: projectsIcon, text: "Projects", route: "/projects", sound: projectsAudio },
     { src: gamesIcon, text: "Games", route: "/games", sound: gamesAudio },
+    { src: rupeeIcon, text: "Support Me", route: "/sponsor", sound: coinAudio },
     // { src: downloadsIcon, text: "Applications", route: "/applications", sound: applicationsAudio },
   ];
 

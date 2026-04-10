@@ -13,11 +13,25 @@ import "../src/index.css";
 import Page404 from './pages/Page404.jsx';
 import Games from './pages/Games.jsx';
 import MoveSofaGame from './components/Games/MoveSofaGame/MoveSofaGame.jsx';
+import SponsorMe from './pages/SponsorMe.jsx';
+import Projects from './pages/Projects.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Page404 />,
+  },
+
+  {
+    path: "/sponsor",
+    element: <SponsorMe />,
+    errorElement: <Page404 />,
+  },
+
+  {
+    path: "/projects",
+    element: <Projects />,
     errorElement: <Page404 />,
   },
 

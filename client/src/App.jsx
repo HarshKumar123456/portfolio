@@ -10,25 +10,25 @@ import clickAudio from "./assets/audio/click.wav";
 function App() {
 
   const infoCardStyle = {
-    "box-shadow": "5.67px 5.67px 3.78px 0px #00000066",
+    "boxShadow": "5.67px 5.67px 3.78px 0px #00000066",
   }
 
   const lineBreakStyle = {
     "background": "linear-gradient(180deg, rgba(40, 40, 40, 0.1) 0%, rgba(248, 248, 248, 0.1) 100%),linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05))",
-    "box-shadow": "0px 4px 4px 0px #00000054",
+    "boxShadow": "0px 4px 4px 0px #00000054",
   };
 
   const controlsStyle = {
     "background": "#171717",
-    "box-shadow": "0px 4.96px 12.4px 2.48px #00000040 inset",
+    "boxShadow": "0px 4.96px 12.4px 2.48px #00000040 inset",
   };
 
   const activeButtonStyle = {
     "background": "#28292F",
     "color": "white",
-    "box-shadow": "13.49px 16.87px 67.47px 8.43px #0A0A0A",
-    "box-shadow": "-8.43px -16.87px 50.6px -16.87px #485B71",
-    "box-shadow": "rgb(10, 10, 10) 14px 16px 67px 8px, rgb(72, 91, 113) -8px -16px 50px -16px",
+    "boxShadow": "13.49px 16.87px 67.47px 8.43px #0A0A0A",
+    "boxShadow": "-8.43px -16.87px 50.6px -16.87px #485B71",
+    "boxShadow": "rgb(10, 10, 10) 14px 16px 67px 8px, rgb(72, 91, 113) -8px -16px 50px -16px",
   };
 
 
@@ -92,7 +92,7 @@ function App() {
                           </a> and I am a Full-stack Web Developer with hands-on experience in building scalable web applications.
                           My approach to development is
                           grounded in continuous learning and adapting to emerging technologies. With a belief in the
-                          Cosmopolitan Ideology, I strive to contribute to a diverse and inclusive work environment
+                          वसुधैव कुटुम्बकम् (World is Family), I strive to contribute to a diverse and inclusive work environment
                           where ideas from all backgrounds are welcomed and nurtured.
                         </>
                         :
